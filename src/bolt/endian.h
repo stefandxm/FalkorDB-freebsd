@@ -14,6 +14,11 @@
     #define htonll(x) htobe64(x)
     #define ntohll(x) be64toh(x)
 
+#elif defined (__FreeBSD__)
+    #include <sys/endian.h>
+    #define htonll(x) htobe64(x)
+    #define ntohll(x) be64toh(x)
+
 #elif defined ( __MACH__ ) && defined ( __APPLE__ )
 
     // otherwise, on the Mac, use the MACH functions

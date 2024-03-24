@@ -33,3 +33,4 @@ void ws_write_frame_header
 	buffer_index_t *buf,  // the buffer to write to
 	uint64_t n            // the payload length
 );
+
